@@ -88,4 +88,6 @@ void xoaduvua32gb(List*list) {
           xoafilenho(list);
      }
 }
-
+int main {
+    
+}
