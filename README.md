@@ -6,4 +6,4 @@ bài tập tuần 6: File
  2. tạo 2 hàm 1 hàm thêm file vào đầu(khi chưa có file nào , 1 hàm thêm file phía sau)
  3. hàm duyetthoigian để lắp các file vào
  4. hàm tinhtoancacfile để tính tổng dung lượng
- 5. hàm xoadufile32gb để xoá file nhỏ nhất cho đến khi còn 32gb
+ 5. hàm xoaduvua32gb để xoá file nhỏ nhất cho đến khi còn 32gb
