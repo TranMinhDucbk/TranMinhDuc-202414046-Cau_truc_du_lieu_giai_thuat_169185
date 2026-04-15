@@ -89,5 +89,23 @@ void xoaduvua32gb(List*list) {
      }
 }
 int main {
-    
+    // 1. Khởi tạo danh sách
+    List fileList;
+    List_Init(&fileList);
+
+    // 2. Tạo file 
+    File f1 = {"Document.pdf", 10, 15.0}; 
+    File f2 = {"Video_A.mp4", 5, 20.0};   
+    File f3 = {"Image_B.png", 20, 10.0};  
+
+    // 3 thêm file vào danh sách
+    duyetthoigian(&fileList, f2); 
+    duyetthoigian(&fileList, f1); 
+    duyetthoigian(&fileList, f3); 
+
+    // 4 tính toán các file  
+    cout << "Tong dung luong ban dau: " << tinhtoancacfile(&fileList) << " GB" << endl;
+
+    // 5 xóa file nhỏ nhất cho đến khi dung lượng <= 32GB
+    cout <<"cho vào usb 32gb" << xoavuadu32gb(&fileList);
 }
