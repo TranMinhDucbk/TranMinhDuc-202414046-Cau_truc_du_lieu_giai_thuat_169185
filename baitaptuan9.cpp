@@ -4,7 +4,7 @@ struct Ngay{
      int ngay, thang , nam;
 };
 struct SinhVien {
-    char maSV[10];
+    long long maSV;
     char name[50];
     int GioiTinh;
     Ngay Ngaysinh;
