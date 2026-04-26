@@ -159,10 +159,10 @@ int main() {
     List_Init(&ds);
 
     // Tạo dữ liệu mẫu (sv1 và sv3 cố tình để trùng ngày sinh)
-    SinhVien sv1 = {"202414046", "Tran Minh Duc", 1, {1, 1, 2000}, "Ha Noi", "Dien tu 02", "K69"};
-    SinhVien sv2 = {"202414043", "Tran Thi Bich", 0, {2, 2, 2000}, "Hai Phong", "Dien tu 02", "K70"};
-    SinhVien sv3 = {"202416032", "Le Van Cu", 1, {1, 1, 2000}, "Da Nang", "Co Khi 03", "K68"}; 
-    SinhVien sv4 = {"202414853", "Pham Thi Dich", 0, {3, 3, 2001}, "Sai Gon", "Co Khi 04", "K69"};
+    SinhVien sv1 = {202414046, "Tran Minh Duc", 1, {1, 1, 2000}, "Ha Noi", "Dien tu 02", "K69"};
+    SinhVien sv2 = {202414043, "Tran Thi Bich", 0, {2, 2, 2000}, "Hai Phong", "Dien tu 02", "K70"};
+    SinhVien sv3 = {202416032, "Le Van Cu", 1, {1, 1, 2000}, "Da Nang", "Co Khi 03", "K68"}; 
+    SinhVien sv4 = {202414853, "Pham Thi Dich", 0, {3, 3, 2001}, "Sai Gon", "Co Khi 04", "K69"};
 
     // Thêm sinh viên vào danh sách
     duyettheomssv(&ds, sv1);
