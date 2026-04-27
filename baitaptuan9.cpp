@@ -170,13 +170,13 @@ int main() {
     duyettheomssv(&ds, sv3);
     duyettheomssv(&ds, sv4);
 
-    cout << "--- DANH SACH SAU KHI CHEN ---" << endl;
+    cout << "DANH SACH SAU KHI CHEN" << endl;
     inDS(&ds);
 
-    cout << "\n--- IN SINH VIEN CUNG NGAY SINH ---" << endl;
+    cout << "\nIN SINH VIEN CUNG NGAY SINH" << endl;
     inSVcungngaysinh(&ds);
 
-    cout << "\n--- DANH SACH SAU KHI XOA NGUOI CUNG NGAY SINH ---" << endl;
+    cout << "\nDANH SACH SAU KHI XOA NGUOI CUNG NGAY SINH" << endl;
     xoaNode(&ds);
     inDS(&ds);
 
