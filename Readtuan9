@@ -1,3 +1,10 @@
 Nội dung bài tập tuần 9
 
-
+1. các struct ngày và sinh viên và list khởi tạo theo cấu trúc móc nối
+2. hàm themsvvodau là thêm một node vô vị trí đầu tiên 
+3. ham themsv để them sv vô sau
+4. ham duyettheomssv để sắp xếp sinh viên theo thứ tự mssv từ nhỏ đến lớn
+5. hàm inDS để in danh sách sau khi chạy hàm duyettheomssv
+6. hàm cungngaysinh trả về giá trị 0 nếu không cùng 1 nếu cùng
+7. inSVcungngaysinh để in ra các sinh viên cùng ngày sinh - duyệt list có 1 biến để kiểm tra in chưa chưa thì in, 1 node q2 để in ra sinh viên còn lại
+8. xoaNode để xáo sinh viên có cùng ngày sinh với sinh viên cho trước -> duyệt list sau đó có 1 biến đếm số lần lặp sau đó xoá cái node bị lặp( ở đây là trùng ngày ssinh)
