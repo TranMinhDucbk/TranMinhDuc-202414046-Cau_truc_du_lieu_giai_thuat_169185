@@ -121,7 +121,7 @@ void duyettheomssv(List* list, SinhVien sinhvien){
  }
 void xoaNode(List* list) {
     Node* p = list->first;
-    Node* prev = 0; 
+    Node* k = 0; 
 
     while (p != 0) {
         int count = 0;
@@ -135,18 +135,18 @@ void xoaNode(List* list) {
         if (count > 1) {
             Node* q = p; 
 
-            if (prev == 0) { 
+            if (k == 0) { 
                
                 list->first = p->next;
                 p = p->next;
             } else { 
-                prev->next = p->next; 
+                k->next = p->next; 
                 p = p->next;
             }
             
             delete q; 
         } else {
-            prev = p;
+            k = p;
             p = p->next;
         }
     }
