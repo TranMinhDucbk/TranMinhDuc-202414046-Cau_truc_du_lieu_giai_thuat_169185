@@ -37,7 +37,7 @@ void KhoiTaoCay(Cay &T) {
 
 // Kiểm tra cây có rỗng hay không
 int CayRong(Cay T) {
-    return T.MaxNode == 0; // Trả về 1 (true) nếu MaxNode = 0, ngược lại trả về 0 (false)
+    return T.MaxNode == 0; // Trả về 1  nếu MaxNode = 0, ngược lại trả về 0
 }
 
 // Lấy chỉ số của nút gốc
@@ -78,7 +78,7 @@ void TaoCayLechTrai_TuanTu(Cay &T, int soNut) {
 // Tạo cây lệch phải
 void TaoCayLechPhai_TuanTu(Cay &T, int soNut) {
     KhoiTaoCay(T);
-    T.MaxNode = soNut; // Ghi nhận số nút
+    T.MaxNode = soNut; 
     int p = 0; // Bắt đầu từ vị trí gốc
     for (int i = 0; i < soNut; i++) {
         T.Data[p] = i + 1; // Gán dữ liệu cho nút hiện tại
@@ -108,8 +108,8 @@ void duyettrungto(Node p, Cay T) {
 //duyệt hậu tố
 void duyethauto(Node p, Cay T) {
     if (T.Data[p] != -1) {
-        duyethauto(ConTrai(p, T), T);
-        duyethauto(ConPhai(p, T), T);
+        duyethauto(ConTrai(p, T), T); // gọi đệ quy nhánh trái
+        duyethauto(ConPhai(p, T), T); // gọi đệ quy nhánh phải
         cout<< T.Data[p] << " ";
     }
 }
