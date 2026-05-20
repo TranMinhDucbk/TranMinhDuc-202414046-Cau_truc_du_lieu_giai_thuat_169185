@@ -160,7 +160,7 @@ struct NodeBieuThuc {
     NodeBieuThuc* trai;
     NodeBieuThuc* phai;
 
-    NodeBieuThuc(char val) { // Constructor
+    NodeBieuThuc(char val) { 
         data = val;
         trai = NULL;
         phai = NULL;
