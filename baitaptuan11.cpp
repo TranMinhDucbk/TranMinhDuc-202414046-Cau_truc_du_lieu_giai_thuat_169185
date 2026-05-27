@@ -171,17 +171,17 @@ int main() {
 
        // Test Cây đầy đủ
 TaoCayDayDu_TuanTu(T_DayDu, 3);
-    cout << " - Duyet tien to:  "; duyettiento(Root(T_DayDu), T_DayDu); cout << endl;
-    cout << " - Duyet trung to: "; duyettrungto(Root(T_DayDu), T_DayDu); cout << endl;
-    cout << " - Duyet hau to:   "; duyethauto(Root(T_DayDu), T_DayDu); cout << endl;
+    cout << "Duyet tien to:  "; duyettiento(Root(T_DayDu), T_DayDu); cout << endl;
+    cout << "Duyet trung to: "; duyettrungto(Root(T_DayDu), T_DayDu); cout << endl;
+    cout << "Duyet hau to:   "; duyethauto(Root(T_DayDu), T_DayDu); cout << endl;
 
     // Test Cây lệch trái
         TaoCayLechTrai_TuanTu(T_LechTrai, 3);
-    cout << " - Duyet trung to: "; duyettrungto(Root(T_LechTrai), T_LechTrai); cout << endl;
+    cout << "Duyet trung to: "; duyettrungto(Root(T_LechTrai), T_LechTrai); cout << endl;
 
     // Test Cây lệch phải
     TaoCayLechPhai_TuanTu(T_LechPhai, 3);
-    cout << " - Duyet trung to: "; duyettrungto(Root(T_LechPhai), T_LechPhai); cout << endl;
+    cout << "Duyet trung to: "; duyettrungto(Root(T_LechPhai), T_LechPhai); cout << endl;
 
 
     // 2. TEST CẤU TRÚC LƯU TRỮ MÓC NỐI
