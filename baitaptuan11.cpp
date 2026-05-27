@@ -37,7 +37,7 @@ void KhoiTaoCay(Cay &T) {
 
 // Kiểm tra cây có rỗng hay không
 int CayRong(Cay T) {
-    return T.MaxNode == 0; // Trả về 1 (true) nếu MaxNode = 0, ngược lại trả về 0 (false)
+    return T.MaxNode == 0; // Trả về 1  nếu MaxNode = 0, ngược lại trả về 0
 }
 
 // Lấy chỉ số của nút gốc
@@ -78,7 +78,7 @@ void TaoCayLechTrai_TuanTu(Cay &T, int soNut) {
 // Tạo cây lệch phải
 void TaoCayLechPhai_TuanTu(Cay &T, int soNut) {
     KhoiTaoCay(T);
-    T.MaxNode = soNut; // Ghi nhận số nút
+    T.MaxNode = soNut; 
     int p = 0; // Bắt đầu từ vị trí gốc
     for (int i = 0; i < soNut; i++) {
         T.Data[p] = i + 1; // Gán dữ liệu cho nút hiện tại
@@ -108,8 +108,8 @@ void duyettrungto(Node p, Cay T) {
 //duyệt hậu tố
 void duyethauto(Node p, Cay T) {
     if (T.Data[p] != -1) {
-        duyethauto(ConTrai(p, T), T);
-        duyethauto(ConPhai(p, T), T);
+        duyethauto(ConTrai(p, T), T); // gọi đệ quy nhánh trái
+        duyethauto(ConPhai(p, T), T); // gọi đệ quy nhánh phải
         cout<< T.Data[p] << " ";
     }
 }
@@ -160,7 +160,7 @@ struct NodeBieuThuc {
     NodeBieuThuc* trai;
     NodeBieuThuc* phai;
 
-    NodeBieuThuc(char val) { // Constructor
+    NodeBieuThuc(char val) { 
         data = val;
         trai = NULL;
         phai = NULL;
@@ -171,17 +171,17 @@ int main() {
 
        // Test Cây đầy đủ
 TaoCayDayDu_TuanTu(T_DayDu, 3);
-    cout << " - Duyet tien to:  "; duyettiento(Root(T_DayDu), T_DayDu); cout << endl;
-    cout << " - Duyet trung to: "; duyettrungto(Root(T_DayDu), T_DayDu); cout << endl;
-    cout << " - Duyet hau to:   "; duyethauto(Root(T_DayDu), T_DayDu); cout << endl;
+    cout << "Duyet tien to:  "; duyettiento(Root(T_DayDu), T_DayDu); cout << endl;
+    cout << "Duyet trung to: "; duyettrungto(Root(T_DayDu), T_DayDu); cout << endl;
+    cout << "Duyet hau to:   "; duyethauto(Root(T_DayDu), T_DayDu); cout << endl;
 
     // Test Cây lệch trái
         TaoCayLechTrai_TuanTu(T_LechTrai, 3);
-    cout << " - Duyet trung to: "; duyettrungto(Root(T_LechTrai), T_LechTrai); cout << endl;
+    cout << "Duyet trung to: "; duyettrungto(Root(T_LechTrai), T_LechTrai); cout << endl;
 
     // Test Cây lệch phải
     TaoCayLechPhai_TuanTu(T_LechPhai, 3);
-    cout << " - Duyet trung to: "; duyettrungto(Root(T_LechPhai), T_LechPhai); cout << endl;
+    cout << "Duyet trung to: "; duyettrungto(Root(T_LechPhai), T_LechPhai); cout << endl;
 
 
     // 2. TEST CẤU TRÚC LƯU TRỮ MÓC NỐI
