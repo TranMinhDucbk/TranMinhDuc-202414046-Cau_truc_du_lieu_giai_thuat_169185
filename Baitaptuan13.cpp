@@ -7,7 +7,7 @@ struct Node {
     Node *right;
 };
 // tạo nút
-Node *taonode(int a){   
+Node *taonode(int a) {   
     Node *p = new Node;
     p->data = a;
     p->left = NULL;
@@ -28,9 +28,22 @@ void themnode(Node *&nodethem, int a) {
 Node* timkiemnode(Node *goc, int a) { // tìm node
     if(goc == NULL || goc->data == a)
         return goc;
-
     if(a < goc->data) {    // nếu nhỏ hơn gốc thì sang trái
         return timkiemnode(goc->left, a);}
     else{
     return timkiemnode(goc->right, a);}  // không thì sang phải
+}
+int main {
+ int a[]={2001, 2002, 2006, 2007, 2008, 2004, 2005, 2001, 1999, 2004};
+int n = 10;
+    Node* goc= NULL;
+    for(int i=0; i<n; i++){
+        themnode(goc, a[i]); }
+    int cantim = 2004;
+    Node* p = timkiemnode(goc, cantim);
+    if(p != NULL) {
+        cout<<"co node can tim "<< cantim << endl;
+    }
+    else{
+        cout<<"khong co node can tim "<< cantim <<endl;
 }
