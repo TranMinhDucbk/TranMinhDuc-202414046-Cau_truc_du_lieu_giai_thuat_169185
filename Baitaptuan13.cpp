@@ -39,7 +39,7 @@ int n = 10;
     Node* goc = NULL;
     for(int i = 0; i < n; i++){
         themnode(goc, a[i]); }
-    int cantim = 2004;
+    int cantim = 1999;
     Node* p = timkiemnode(goc, cantim);
     if(p != NULL) {
         cout<<"co node can tim "<< cantim << endl;
