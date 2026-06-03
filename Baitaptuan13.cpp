@@ -25,3 +25,12 @@ void themnode(Node *&nodethem, int a) {
             themnode(nodethem->right, a); } //còn lại sang phải
     }
 }
+Node* timkiemnode(Node *goc, int a) { // tìm node
+    if(goc == NULL || goc->data == a)
+        return goc;
+
+    if(a < goc->data) {    // nếu nhỏ hơn gốc thì sang trái
+        return timkiemnode(goc->left, a);}
+    else{
+    return timkiemnode(goc->right, a);}  // không thì sang phải
+}
