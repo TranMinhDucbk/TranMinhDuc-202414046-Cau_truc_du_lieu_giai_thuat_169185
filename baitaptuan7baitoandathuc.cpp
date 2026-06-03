@@ -4,11 +4,11 @@ using namespace std;
 struct Nodedathuc{
      float heso;
      int somu;
-    Nodedathuc* link;
+     Nodedathuc* link;
 };
 
 struct ListDT {
-    Nodedathuc*first, *last;
+    Nodedathuc *first, *last;
 };
 
 void initDathuc(ListDT* l) {
@@ -31,7 +31,7 @@ void themNode(ListDT* lDT, Nodedathuc* p){
     }
     else {
         lDT->last -> link = p;
-        lDT-> last = p;
+        lDT->last = p;
     }
 }
 
@@ -50,13 +50,13 @@ void taoDaThuc(ListDT* lDT){
     {
         i++;
         cout << "nhap so phan tu thu " << i << endl;
-		 cout << "\nnhap he so = ";
+		 cout << "nhap he so = ";
         cin >> hs;
         if (hs == 0) break;
-        cout << "\nnhap so mu = ";
+        cout << "nhap so mu = ";
         cin >> sm;
         ganNode(lDT, hs, sm);
-	} while (hs != 0);
+	} while (hs !=0);
     cout << "ket thuc " << endl;
 
 }
@@ -73,10 +73,10 @@ void inDaThuc(ListDT lDT) {
 }
 int main()
 {
-    ListDT DT1;
-    initDathuc(&DT1);
-    taoDaThuc(&DT1);
-    inDaThuc(&DT1);
+ListDT DT1;
+initDathuc(&DT1);
+taoDaThuc(&DT1);
+inDaThuc(&DT1);
 }
 
 

@@ -2,9 +2,9 @@
 using namespace std;
 void incay(int mang[], int n)
 {
-    for(int i=1;i<=n;i++)
+ for(int i=1;i<=n;i++)
     {
-    cout<<mang[i]<<" ";
+cout<< mang[i] << " ";
     }
 }
 void taodong(int mang[], int i, int n)
@@ -15,26 +15,21 @@ void taodong(int mang[], int i, int n)
     {
         if(j<n && mang[j]<mang[j+1])
         {
-            j=j+1;
+        j=j+1;
         }
-
-        if(x>=mang[j])
+if(x>=mang[j])
         {
             break;
-        }
-        mang[j/2]=mang[j];
-
-        j=j*2;
+        }mang[j/2]=mang[j];
+    j=j*2;
     }
     mang[j/2]=x;
 }
 void xepdong(int mang[], int n)
 {
-    cout<<"Mang ban dau:"<<endl;
+    cout << " ban dau:" << endl;
     incay(mang,n);
-
-    
-    for(int i=n/2;i>=1;i--)
+ for(int i=n/2;i>=1;i--)
     {
         taodong(mang,i,n);
 
@@ -42,27 +37,20 @@ void xepdong(int mang[], int n)
         incay(mang,n);
     }
     cout<<" xep dong: "<<endl;
-
-    for(int i=n;i>=2;i--)
+for(int i=n;i>=2;i--)
     {
         int t=mang[1];
         mang[1]=mang[i];
         mang[i]=t;
 
-        cout<<"Sau khi doi:"<<endl;
-        incay(mang,n);
-
-        // vun lại
+        cout<< "sau khi sap xep:" << endl;
+        incay(mang,n); //sau khi in mảng ra thì tiếp tục tạo đống
         taodong(mang,1,i-1);
-
-        cout<< "Sau khi vun lai:" << endl;
+cout<< "sau khi vun dong lai:" << endl;
         incay(mang,n);
-    }
-
-    cout<<"cuoi cung:"<<endl;
+    }cout<<"cuoi cung:"<<endl;
     incay(mang,n);
 }
-
 int main()
 {
     int mangcansxvundong1[11]={0,4,1,3,2,16,9,10,14,8,7};
