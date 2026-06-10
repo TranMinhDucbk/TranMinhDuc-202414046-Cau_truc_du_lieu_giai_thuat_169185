@@ -42,6 +42,11 @@ p->left = x;
     q->right = T;
 q->chieucao = max(chieucao(q->left), chieucao(q->right)) + 1;
     p->chieucao = max(chieucao(p->left), chieucao(p->right)) + 1;
+return y;
+}
 
-    return y;
+int hesocanbang(Node* p){
+     if (p == NULL)
+        return 0;
+return chieucao(p->left) - chieucao(p->right);
 }
