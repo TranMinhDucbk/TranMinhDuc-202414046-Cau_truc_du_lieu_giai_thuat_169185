@@ -8,7 +8,7 @@ struct Node {
     int chieucao;
 };
  int chieucao(Node* c){
-   if ( p == NULL){ return 0;}
+   if ( c == NULL){ return 0;}
      return c->chieucao ;
   }
 int max(int a, int b) {
@@ -58,7 +58,7 @@ if (x < goc->data){
  else if (x > goc->data){
         goc->right = themvaocaycanbang(goc->right, x);}
 else{
-        return root;}
+        return goc;}
 goc->chieucao = max(chieucao(goc->left), chieucao(goc->right)) + 1;
 int canbang = hesocanbang(goc);
     if (canbang > 1 && x < goc->left->data)  // xoay đơn trái trái
@@ -66,7 +66,7 @@ int canbang = hesocanbang(goc);
     if (canbang < -1 && x > goc->right->data)  // xoay đơn phải phải
         return XoayTrai(goc);
     if (canbang > 1 && x > goc->left->data) {   // xoay kép phải trái
-        root->left = XoayTrai(goc->left);
+        goc->left = XoayTrai(goc->left);
         return XoayPhai(goc);
     }
     if (canbang < -1 && x < goc->right->data) {  // xoay kép trái phải
@@ -89,7 +89,7 @@ int main() {
 int n = sizeof(a) / sizeof(a[0]);
 Node* goc = NULL;
     for (int i = 0; i < n; i++) {
-        goc = themvaocaycanbang(goc, a[i]);
+        goc = themvaocaycanbang(goc, a[i]);}
     Duyet_giua(goc);
  return 0;
 }
