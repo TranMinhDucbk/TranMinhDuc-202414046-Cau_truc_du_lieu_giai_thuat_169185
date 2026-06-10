@@ -5,12 +5,9 @@ struct Node {
     int data;
     Node *left;
     Node *right;
+    int chieucao;
 };
-// tạo nút
-Node *taonode(int a) {   
-    Node *p = new Node;
-    p->data = a;
-    p->left = NULL;
-    p->right = NULL;
-    return p;
-}
+ int chieucao(Node* c){
+   if ( p = NULL){ return 0;}
+     return c->chieucao;
+  }
