@@ -27,3 +27,24 @@ while(q->next != NULL){
     }
 q->next = p;
 }
+void duyettheochieurong(int bandau){
+    bool daduyet[11] = {false};
+  queue<int> q;
+  daduyet[bandau] = true;
+    q.push(bandau);
+    int stt = 1;
+    while(!q.empty()){
+        int u = q.front();
+        q.pop();
+cout << stt++ << " " << ten[u] << endl;
+Node *p = ds[u];
+    while(p != NULL){
+            int v = p->data
+ if(daduyet[v] == false) {
+                daduyet[v] = true;
+                q.push(v);
+            }
+      p = p->next;
+        }
+    }
+
