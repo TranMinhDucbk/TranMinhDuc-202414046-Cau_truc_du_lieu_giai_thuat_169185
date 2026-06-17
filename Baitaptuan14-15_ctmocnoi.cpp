@@ -36,7 +36,7 @@ void duyettheochieurong(int bandau){
     while(!q.empty()){
         int u = q.front();
         q.pop();
-cout << stt++ << " " << ten[u] << endl;
+cout << stt++ << " " << tinh[u] << endl;
 Node *p = ds[u];
     while(p != NULL){
             int v = p->data
@@ -47,4 +47,37 @@ Node *p = ds[u];
       p = p->next;
         }
     }
+int main() {
+      for(int i = 0; i < 11; i++)
+        ds[i] = NULL;
 
+    // HN
+    themCanh(0,1);
+    themCanh(0,2);
+    themCanh(0,6);
+    themCanh(0,8);
+    themCanh(0,9);
+    themCanh(0,10);
+
+    // BN
+    themCanh(2,3);
+    themCanh(2,4);
+
+    // BG
+    themCanh(3,4);
+
+    // UB
+    themCanh(4,5);
+
+    // HP
+    themCanh(5,6);
+
+    // HD
+    themCanh(6,7);
+
+    // HY
+    themCanh(7,8);
+     cout << "BFS từ Hà Nội:";
+duyettheochieurong(0);
+return 0;
+}
