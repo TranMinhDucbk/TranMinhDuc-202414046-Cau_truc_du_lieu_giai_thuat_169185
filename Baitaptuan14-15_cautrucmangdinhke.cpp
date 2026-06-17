@@ -21,7 +21,7 @@ cout << stt++ << " " << tinh[u] << endl;
 for (int v = 0; v < 11; v++){
             if (a[u][v] == 1 && daduyet[v] == false){
                 daduyet[v] = true;
-                q.push(v)
+                q.push(v);
             }
         }
     }
