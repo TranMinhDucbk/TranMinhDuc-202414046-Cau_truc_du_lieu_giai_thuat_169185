@@ -15,6 +15,11 @@ Node* taoNode(int node)
     p->data = node;
     p->next = NULL;
 return p; }
+void themCanh(int u, int v)
+{
+    themCuoi(ds[u], v);
+    themCuoi(ds[v], u);
+}
 void themvaocuoi(Node *&dau, int x){
     Node *p = taoNode(x);
 
