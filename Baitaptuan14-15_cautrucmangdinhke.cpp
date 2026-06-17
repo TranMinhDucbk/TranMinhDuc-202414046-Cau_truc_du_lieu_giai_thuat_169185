@@ -28,25 +28,25 @@ for (int v = 0; v < 11; v++){
 }
 int main()
  {
-    themvaocanh(0,1);   // HN - TN
-    themvaocanh(0,2);   // HN - BN
-    themvaocanh(0,6);   // HN- HD
-    themvaocanh(0,8);   // HN- PL
-    themvaocanh(0,9);   // HN - HB
-     themvaocanh(0,10);  // HN - ST
+    themcanh(0,1);   // HN - TN
+    themcanh(0,2);   // HN - BN
+    themcanh(0,6);   // HN- HD
+    themcanh(0,8);   // HN- PL
+    themcanh(0,9);   // HN - HB
+     themcanh(0,10);  // HN - ST
      
-    themvaocanh(2,3);   // BN- BG
-    themvaocanh(2,4);   // BN- UB
+    themcanh(2,3);   // BN- BG
+    themcanh(2,4);   // BN- UB
    
-    themvaocanh(3,4);   // BG - UB
+    themcanh(3,4);   // BG - UB
    
-    themvaocanh(4,5);   // UB-HP
+    themcanh(4,5);   // UB-HP
    
-    themvaocanh(5,6);   // HP - HD
+    themcanh(5,6);   // HP - HD
    
-    themvaocanh(6,7);   // HD- HY
+    themcanh(6,7);   // HD- HY
    
-    themvaocanh(7,8);   // HY- PL
+    themcanh(7,8);   // HY- PL
     cout << "BFS bắt đầu từ HN";
     duyettheochieurong(0);
 return 0;
