@@ -17,8 +17,8 @@ Node* taoNode(int node)
 return p; }
 void themCanh(int u, int v)
 {
-    themCuoi(ds[u], v);
-    themCuoi(ds[v], u);
+    themvaocuoi(ds[u], v);
+    themvaocuoi(ds[v], u);
 }
 void themvaocuoi(Node *&dau, int x){
     Node *p = taoNode(x);
