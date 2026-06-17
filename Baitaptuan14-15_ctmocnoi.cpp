@@ -15,11 +15,7 @@ Node* taoNode(int node)
     p->data = node;
     p->next = NULL;
 return p; }
-void themCanh(int u, int v)
-{
-    themvaocuoi(ds[u], v);
-    themvaocuoi(ds[v], u);
-}
+
 void themvaocuoi(Node *&dau, int x){
     Node *p = taoNode(x);
 
@@ -31,6 +27,10 @@ while(q->next != NULL){
         q = q->next;
     }
 q->next = p;
+}
+void themCanh(int u, int v) {
+    themvaocuoi(ds[u], v);
+    themvaocuoi(ds[v], u);
 }
 void duyettheochieurong(int bandau){
     bool daduyet[11] = {false};
