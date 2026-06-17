@@ -3,7 +3,7 @@
 using namespace std;
 
 string tinh[11] = {"HN","TN","BN","BG","UB","HP","HD","HY","PL", "HB","ST"};
-
+int a[11][11] = {0};
 void themcanh(int u, int v) { // kết nối các tỉnh
     a[u][v] = 1;
     a[v][u] = 1; }
@@ -17,7 +17,7 @@ daduyet[bandau] = true;
     while (!q.empty())  {
         int u = q.front();
         q.pop();
-cout << stt++ << " " << ten[u] << endl;
+cout << stt++ << " " << tinh[u] << endl;
 for (int v = 0; v < 11; v++){
             if (a[u][v] == 1 && daduyet[v] == false){
                 daduyet[v] = true;
