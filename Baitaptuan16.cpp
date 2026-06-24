@@ -82,5 +82,23 @@ while (tam_thoi != -1) {
     cout << "Tong so chang phai di: " << khoang_cach[diem_dich] ;
 }
 int main() {
-    
+    DoThi do_thi_tinh_thanh;
+    khoi_tao_do_thi(&do_thi_tinh_thanh);
+    them_canh_noi(&do_thi_tinh_thanh, 0, 1);
+    them_canh_noi(&do_thi_tinh_thanh, 0, 2);
+    them_canh_noi(&do_thi_tinh_thanh, 0, 3);
+    them_canh_noi(&do_thi_tinh_thanh, 0, 7);
+    them_canh_noi(&do_thi_tinh_thanh, 0, 9);
+    them_canh_noi(&do_thi_tinh_thanh, 0, 10);
+    them_canh_noi(&do_thi_tinh_thanh, 3, 4);
+    them_canh_noi(&do_thi_tinh_thanh, 3, 5);
+    them_canh_noi(&do_thi_tinh_thanh, 4, 5);
+    them_canh_noi(&do_thi_tinh_thanh, 5, 6);
+    them_canh_noi(&do_thi_tinh_thanh, 6, 7);
+    them_canh_noi(&do_thi_tinh_thanh, 7, 8);
+    them_canh_noi(&do_thi_tinh_thanh, 8, 9);
+    tim_duong_ngan_nhat(&do_thi_tinh_thanh, 0, 6); 
+    tim_duong_ngan_nhat(&do_thi_tinh_thanh, 2, 5); 
+    tim_duong_ngan_nhat(&do_thi_tinh_thanh, 4, 9); 
+return 0;
 }
