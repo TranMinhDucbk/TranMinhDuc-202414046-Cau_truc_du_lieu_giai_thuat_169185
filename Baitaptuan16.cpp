@@ -27,3 +27,7 @@ void khoi_tao_do_thi(DoThi *do_thi) {  // tạo đồ thị
             }
         }
     }
+void them_canh_noi(DoThi *do_thi, int u, int v) {
+    do_thi->ma_tran_ke[u][v] = 1;
+    do_thi->ma_tran_ke[v][u] = 1;
+}
