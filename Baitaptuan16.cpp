@@ -6,9 +6,9 @@ using namespace std;
 const int VO_CUC = 999999;
 const int SO_THANH_PHO = 11;
 
-char ten_thanh_pho[SO_THANH_PHO] = {
+string ten_thanh_pho[SO_THANH_PHO] = {
     "Ha Noi", "Son Tay", "Thai Nguyen", "Bac Ninh", "Bac Giang",
-    "Uong Bi", "Hai Phong", "Hai Duong", "Hung Yen", "Phu Ly", "Hoa Binh
+    "Uong Bi", "Hai Phong", "Hai Duong", "Hung Yen", "Phu Ly", "Hoa Binh"
 };
 
 struct DoThi {
@@ -23,10 +23,11 @@ void khoi_tao_do_thi(DoThi *do_thi) {  // tạo đồ thị
             if (i == j) {
                 do_thi->ma_tran_ke[i][j] = 0;
             } else {
-                do_thi->ma_tran_ke[i][j] = VO_CUC
+                do_thi->ma_tran_ke[i][j] = VO_CUC;
             }
         }
     }
+}
 void them_canh_noi(DoThi *do_thi, int u, int v) {
     do_thi->ma_tran_ke[u][v] = 1;
     do_thi->ma_tran_ke[v][u] = 1;
@@ -35,10 +36,10 @@ void tim_duong_ngan_nhat(DoThi *do_thi, int diem_xuat_phat, int diem_dich) {
     int khoang_cach[SO_THANH_PHO];
     bool da_duyet[SO_THANH_PHO];
     int vet_duong_di[SO_THANH_PHO];
- for (int i = 0; i < do_thi->so_luong_dinh; i++) 
+ for (int i = 0; i < do_thi->so_luong_dinh; i++) {
         khoang_cach[i] = VO_CUC;
         da_duyet[i] = false;
-        vet_duong_di[i] = -1
+        vet_duong_di[i] = -1;
     }
    khoang_cach[diem_xuat_phat] = 0;
 for (int buoc = 0; buoc < do_thi->so_luong_dinh - 1; buoc++) {
@@ -62,6 +63,7 @@ for (int i = 0; i < do_thi->so_luong_dinh; i++) {
                 }
             }
         }
+}
 if (khoang_cach[diem_dich] == VO_CUC) {
 cout << "Khong tim thay duong di tu " << ten_thanh_pho[diem_xuat_phat] 
              << " den " << ten_thanh_pho[diem_dich];
@@ -69,7 +71,7 @@ cout << "Khong tim thay duong di tu " << ten_thanh_pho[diem_xuat_phat]
     }
 int duong_di[SO_THANH_PHO];
     int so_luong_diem = 0;
-    int tam_thoi = diem_dich
+    int tam_thoi = diem_dich;
 while (tam_thoi != -1) {
         duong_di[so_luong_diem++] = tam_thoi;
         tam_thoi = vet_duong_di[tam_thoi];
@@ -77,7 +79,7 @@ while (tam_thoi != -1) {
 // đường đi
     for (int i = so_luong_diem - 1; i >= 0; i--) {
         cout << ten_thanh_pho[duong_di[i]];
-        if (i > 0) cout << " -> "
+        if (i > 0) cout << " -> ";
     }
     cout << "Tong so chang phai di: " << khoang_cach[diem_dich] ;
 }
