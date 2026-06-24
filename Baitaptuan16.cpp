@@ -6,13 +6,24 @@ using namespace std;
 const int VO_CUC = 999999;
 const int SO_THANH_PHO = 11;
 
-// Thay mảng char bằng mảng std::string của C++ giúp quản lý chuỗi dễ dàng hơn
-const string ten_thanh_pho[SO_THANH_PHO] = {
+char ten_thanh_pho[SO_THANH_PHO] = {
     "Ha Noi", "Son Tay", "Thai Nguyen", "Bac Ninh", "Bac Giang",
-    "Uong Bi", "Hai Phong", "Hai Duong", "Hung Yen", "Phu Ly", "Hoa Binh"
+    "Uong Bi", "Hai Phong", "Hai Duong", "Hung Yen", "Phu Ly", "Hoa Binh
 };
 
 struct DoThi {
     int so_luong_dinh;
     int ma_tran_ke[SO_THANH_PHO][SO_THANH_PHO];
 };
+
+void khoi_tao_do_thi(DoThi *do_thi) {  // tạo đồ thị
+    do_thi->so_luong_dinh = SO_THANH_PHO;
+    for (int i = 0; i < do_thi->so_luong_dinh; i++) {
+        for (int j = 0; j < do_thi->so_luong_dinh; j++) {
+            if (i == j) {
+                do_thi->ma_tran_ke[i][j] = 0;
+            } else {
+                do_thi->ma_tran_ke[i][j] = VO_CUC
+            }
+        }
+    }
