@@ -62,5 +62,25 @@ for (int i = 0; i < do_thi->so_luong_dinh; i++) {
                 }
             }
         }
-
-
+if (khoang_cach[diem_dich] == VO_CUC) {
+cout << "Khong tim thay duong di tu " << ten_thanh_pho[diem_xuat_phat] 
+             << " den " << ten_thanh_pho[diem_dich];
+        return;
+    }
+int duong_di[SO_THANH_PHO];
+    int so_luong_diem = 0;
+    int tam_thoi = diem_dich
+while (tam_thoi != -1) {
+        duong_di[so_luong_diem++] = tam_thoi;
+        tam_thoi = vet_duong_di[tam_thoi];
+    }
+// đường đi
+    for (int i = so_luong_diem - 1; i >= 0; i--) {
+        cout << ten_thanh_pho[duong_di[i]];
+        if (i > 0) cout << " -> "
+    }
+    cout << "Tong so chang phai di: " << khoang_cach[diem_dich] ;
+}
+int main() {
+    
+}
