@@ -41,3 +41,26 @@ void tim_duong_ngan_nhat(DoThi *do_thi, int diem_xuat_phat, int diem_dich) {
         vet_duong_di[i] = -1
     }
    khoang_cach[diem_xuat_phat] = 0;
+for (int buoc = 0; buoc < do_thi->so_luong_dinh - 1; buoc++) {
+        int khoang_cach_nho_nhat = VO_CUC;
+        int diem_hien_tai = -1;
+for (int i = 0; i < do_thi->so_luong_dinh; i++) {
+            if (!da_duyet[i] && khoang_cach[i] < khoang_cach_nho_nhat) {
+                khoang_cach_nho_nhat = khoang_cach[i];
+                diem_hien_tai = i;
+            }
+        }
+
+        if (diem_hien_tai == -1) break;
+
+        da_duyet[diem_hien_tai] = true;
+for (int i = 0; i < do_thi->so_luong_dinh; i++) {
+            if (!da_duyet[i] && do_thi->ma_tran_ke[diem_hien_tai][i] != VO_CUC && khoang_cach[diem_hien_tai] != VO_CUC) {
+                if (khoang_cach[diem_hien_tai] + do_thi->ma_tran_ke[diem_hien_tai][i] < khoang_cach[i]) {
+                    khoang_cach[i] = khoang_cach[diem_hien_tai] + do_thi->ma_tran_ke[diem_hien_tai][i];
+                    vet_duong_di[i] = diem_hien_tai;
+                }
+            }
+        }
+
+
