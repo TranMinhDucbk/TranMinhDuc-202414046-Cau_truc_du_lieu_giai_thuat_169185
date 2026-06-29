@@ -49,7 +49,7 @@ void Prim(Matran &g) { //hàm thuận toán prim
              } }
         }
      if (u_min != -1 && v_min != -1) { // nếu tìm dfduowjc đường mới
-        cout << "Chon canh " << DSTinh[u_min] << " -> " << DSTinh[v_min] << " = " << trso_min << endl;
+        cout << "chọn cạnh " << DSTinh[u_min] << " -> " << DSTinh[v_min] << " = " << trso_min << endl;
         Daduyet[v_min] = true;     // Kết nạp đỉnh mới vào cây
         dsCanh[soCanh++] = {u_min, v_min};   }   // lưu vào mảng để in ra kq
     else  break;    } 
@@ -63,6 +63,42 @@ void Prim(Matran &g) { //hàm thuận toán prim
     }
     cout << endl;
 }
-
+struct Canh {   int u, v, ts;  };  // thông tin 1 cạnh
+int Timgoc(int cha[], int i) {
+    return (cha[i] == -1) ? i : Timgoc(cha, cha[i]);  }
+void TTKruskal(Matran &g) {
+    int n = g.Sotinhxet, socanh = 0;
+    Canh ds[100]; 
+for (int i = 0; i < n; i++) {
+    for (int j = i + 1; j < n; j++) { // nửa trên ma trận đối sứng
+    if (g.matrix[i][j] > 0) {   
+        ds[socanh] = {i, j, g.matrix[i][j]}; 
+        socanh++;    } }
+}
+for (int i = 0; i < socanh - 1; i++) {   // sắp xếp theo thứ tự trọng số
+    for (int j = i + 1; j < socanh; j++) {
+        if (ds[i].ts > ds[j].ts) swap(ds[i], ds[j]);  }
+}
+    cout << "KRUSAL "; 
+for (int i = 0; i < socanh; i++) {
+    cout << DSTinh[ds[i].u] << " -> " << DSTinh[ds[i].v] << " = " << ds[i].ts << ((i < socanh - 1) ? ", " : "\n\n");} 
+ int cha[Sotinh_max];
+    for (int i = 0; i < n; i++) cha[i] = -1; 
+ Canh caykhung[Sotinh_max]; 
+    int socanhcay = 0;
+for (int i = 0; i < socanh; i++) {
+        int goc_u = Timgoc(cha, ds[i].u);
+        int goc_v = Timgoc(cha, ds[i].v);
+ if (goc_u != goc_v) {  // gốc khac -> kh tao thanh chu trinh
+        cout << " adding " << DSTinh[ds[i].u] << " -> " << DSTinh[ds[i].v] << " = " << ds[i].ts << endl; 
+        caykhung[socanhcay++] = ds[i]; 
+        cha[goc_u] = goc_v;            
+    } }
+cout << "Cây khung min: ";
+    for (int i = 0; i < socanhcay; i++) {
+        cout << DSTinh[caykhung[i].u] << " -> " << DSTinh[caykhung[i].v];
+        if (i < socanhcay - 1) cout << ", "; }
+    cout << endl;
+}
 
 
