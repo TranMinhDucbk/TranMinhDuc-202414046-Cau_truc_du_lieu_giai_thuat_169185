@@ -34,7 +34,7 @@ void Prim(Matran &g) { //hàm thuận toán prim
 
     CanhChon dsCanh[Sotinh_max];
     int soCanh = 0;
-    cout << "\nThuat toan PRIM (Bat dau tu dinh Hoa Binh):\n";
+    cout << " PRIM tu dinh Hoa Binh:";
     for (int i = 0; i < n - 1; i++) { // n đỉnh
         int trso_min = INF;
         int u_min = -1, v_min = -1;  // đánh dấu
